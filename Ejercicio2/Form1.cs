@@ -24,5 +24,10 @@ namespace Ejercicio2
                 e.Cancel = true;
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
