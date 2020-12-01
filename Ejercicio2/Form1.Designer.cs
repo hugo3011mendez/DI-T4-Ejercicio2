@@ -108,7 +108,7 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(394, 210);
+            this.lblImagen.Location = new System.Drawing.Point(249, 157);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(35, 13);
             this.lblImagen.TabIndex = 7;
@@ -123,6 +123,7 @@
             this.btnImagen.TabIndex = 8;
             this.btnImagen.Text = "Cargar Imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
             this.btnImagen.MouseEnter += new System.EventHandler(this.pasarPorBoton);
             this.btnImagen.MouseLeave += new System.EventHandler(this.salirBoton);
             // 

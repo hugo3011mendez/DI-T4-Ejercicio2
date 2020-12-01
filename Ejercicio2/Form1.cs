@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Ejercicio2
 {
@@ -53,6 +54,17 @@ namespace Ejercicio2
             }
             catch (FormatException) { }
             catch (ArgumentException) { }
+        }
+
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Image img = Image.FromFile(txtPath.Text);
+                lblImagen.Size = new Size(img.Width, img.Height);
+                lblImagen.Image = img;
+            }
+            catch (IOException) { }
         }
     }
 }
