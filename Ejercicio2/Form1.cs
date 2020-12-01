@@ -29,5 +29,15 @@ namespace Ejercicio2
         {
             Close();
         }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BackColor = Color.FromArgb(Convert.ToInt32(txtR.Text), Convert.ToInt32(txtG.Text), Convert.ToInt32(txtB.Text));
+            }
+            catch (FormatException) { }
+            catch (ArgumentException) { }
+        }
     }
 }

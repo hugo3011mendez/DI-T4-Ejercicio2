@@ -81,6 +81,7 @@
             this.btnColor.TabIndex = 4;
             this.btnColor.Text = "Color";
             this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // txtPath
             // 
@@ -110,6 +111,7 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnColor;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnSalir;
