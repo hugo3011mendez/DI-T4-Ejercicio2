@@ -37,6 +37,7 @@
             this.txtPath = new System.Windows.Forms.TextBox();
             this.lblPath = new System.Windows.Forms.Label();
             this.lblImagen = new System.Windows.Forms.Label();
+            this.btnImagen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -50,6 +51,8 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.pasarPorBoton);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.salirBoton);
             // 
             // txtR
             // 
@@ -82,6 +85,8 @@
             this.btnColor.Text = "Color";
             this.btnColor.UseVisualStyleBackColor = true;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
+            this.btnColor.MouseEnter += new System.EventHandler(this.pasarPorBoton);
+            this.btnColor.MouseLeave += new System.EventHandler(this.salirBoton);
             // 
             // txtPath
             // 
@@ -109,6 +114,18 @@
             this.lblImagen.TabIndex = 7;
             this.lblImagen.Text = "label1";
             // 
+            // btnImagen
+            // 
+            this.btnImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnImagen.Location = new System.Drawing.Point(274, 197);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(85, 47);
+            this.btnImagen.TabIndex = 8;
+            this.btnImagen.Text = "Cargar Imagen";
+            this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.MouseEnter += new System.EventHandler(this.pasarPorBoton);
+            this.btnImagen.MouseLeave += new System.EventHandler(this.salirBoton);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnColor;
@@ -116,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(631, 318);
+            this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.txtPath);
@@ -124,6 +142,7 @@
             this.Controls.Add(this.txtG);
             this.Controls.Add(this.txtR);
             this.Controls.Add(this.btnSalir);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -146,6 +165,7 @@
         private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.Label lblPath;
         private System.Windows.Forms.Label lblImagen;
+        private System.Windows.Forms.Button btnImagen;
     }
 }
 

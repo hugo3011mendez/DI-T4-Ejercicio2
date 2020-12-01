@@ -30,6 +30,21 @@ namespace Ejercicio2
             Close();
         }
 
+
+        private void pasarPorBoton(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            boton.BackColor = Color.LightSeaGreen;
+        }
+
+
+        private void salirBoton(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            boton.BackColor = SystemColors.Control;
+        }
+
+
         private void btnColor_Click(object sender, EventArgs e)
         {
             try
