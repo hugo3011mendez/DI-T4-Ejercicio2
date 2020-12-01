@@ -65,6 +65,7 @@ namespace Ejercicio2
                 lblImagen.Image = img;
             }
             catch (IOException) { }
+            catch (ArgumentException) { }
         }
 
 
