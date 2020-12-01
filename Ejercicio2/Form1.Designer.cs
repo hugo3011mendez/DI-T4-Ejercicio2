@@ -108,7 +108,7 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(249, 157);
+            this.lblImagen.Location = new System.Drawing.Point(450, 216);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(35, 13);
             this.lblImagen.TabIndex = 7;
