@@ -66,5 +66,18 @@ namespace Ejercicio2
             }
             catch (IOException) { }
         }
+
+
+        private void cambiarAcceptButton(object sender, EventArgs e)
+        {
+            if (sender == txtR || sender == txtG || sender == txtB)
+            {
+                AcceptButton = btnColor;
+            }
+            else if (sender == txtPath)
+            {
+                AcceptButton = btnImagen;
+            }
+        }
     }
 }

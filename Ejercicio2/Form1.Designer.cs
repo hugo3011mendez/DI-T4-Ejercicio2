@@ -60,6 +60,7 @@
             this.txtR.Name = "txtR";
             this.txtR.Size = new System.Drawing.Size(107, 20);
             this.txtR.TabIndex = 1;
+            this.txtR.Click += new System.EventHandler(this.cambiarAcceptButton);
             // 
             // txtG
             // 
@@ -67,6 +68,7 @@
             this.txtG.Name = "txtG";
             this.txtG.Size = new System.Drawing.Size(107, 20);
             this.txtG.TabIndex = 2;
+            this.txtG.Click += new System.EventHandler(this.cambiarAcceptButton);
             // 
             // txtB
             // 
@@ -74,6 +76,7 @@
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(107, 20);
             this.txtB.TabIndex = 3;
+            this.txtB.Click += new System.EventHandler(this.cambiarAcceptButton);
             // 
             // btnColor
             // 
@@ -94,6 +97,7 @@
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(200, 20);
             this.txtPath.TabIndex = 5;
+            this.txtPath.Click += new System.EventHandler(this.cambiarAcceptButton);
             // 
             // lblPath
             // 
@@ -108,7 +112,7 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(450, 216);
+            this.lblImagen.Location = new System.Drawing.Point(440, 216);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(35, 13);
             this.lblImagen.TabIndex = 7;
