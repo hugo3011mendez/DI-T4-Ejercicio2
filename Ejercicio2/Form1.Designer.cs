@@ -47,7 +47,7 @@
             this.btnSalir.Location = new System.Drawing.Point(12, 279);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(79, 31);
-            this.btnSalir.TabIndex = 0;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -84,7 +84,7 @@
             this.btnColor.Location = new System.Drawing.Point(252, 69);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(92, 52);
-            this.btnColor.TabIndex = 4;
+            this.btnColor.TabIndex = 0;
             this.btnColor.Text = "Color";
             this.btnColor.UseVisualStyleBackColor = true;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
@@ -96,7 +96,7 @@
             this.txtPath.Location = new System.Drawing.Point(68, 209);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(200, 20);
-            this.txtPath.TabIndex = 5;
+            this.txtPath.TabIndex = 4;
             this.txtPath.Click += new System.EventHandler(this.cambiarAcceptButton);
             // 
             // lblPath
@@ -124,7 +124,7 @@
             this.btnImagen.Location = new System.Drawing.Point(274, 197);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(85, 47);
-            this.btnImagen.TabIndex = 8;
+            this.btnImagen.TabIndex = 5;
             this.btnImagen.Text = "Cargar Imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
             this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
