@@ -36,15 +36,18 @@
             this.btnColor = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.lblPath = new System.Windows.Forms.Label();
-            this.lblImagen = new System.Windows.Forms.Label();
             this.btnImagen = new System.Windows.Forms.Button();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
+            this.lblErrorColor = new System.Windows.Forms.Label();
+            this.lblErrorImagen = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSalir.Location = new System.Drawing.Point(12, 279);
+            this.btnSalir.Location = new System.Drawing.Point(12, 406);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(79, 31);
             this.btnSalir.TabIndex = 6;
@@ -93,7 +96,7 @@
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(68, 209);
+            this.txtPath.Location = new System.Drawing.Point(61, 265);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(200, 20);
             this.txtPath.TabIndex = 4;
@@ -103,25 +106,16 @@
             // 
             this.lblPath.AutoSize = true;
             this.lblPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblPath.Location = new System.Drawing.Point(9, 210);
+            this.lblPath.Location = new System.Drawing.Point(9, 268);
             this.lblPath.Name = "lblPath";
             this.lblPath.Size = new System.Drawing.Size(46, 17);
             this.lblPath.TabIndex = 6;
             this.lblPath.Text = "Ruta :";
             // 
-            // lblImagen
-            // 
-            this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(440, 216);
-            this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(35, 13);
-            this.lblImagen.TabIndex = 7;
-            this.lblImagen.Text = "label1";
-            // 
             // btnImagen
             // 
             this.btnImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnImagen.Location = new System.Drawing.Point(274, 197);
+            this.btnImagen.Location = new System.Drawing.Point(267, 250);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(85, 47);
             this.btnImagen.TabIndex = 5;
@@ -131,15 +125,48 @@
             this.btnImagen.MouseEnter += new System.EventHandler(this.pasarPorBoton);
             this.btnImagen.MouseLeave += new System.EventHandler(this.salirBoton);
             // 
+            // pbImagen
+            // 
+            this.pbImagen.Location = new System.Drawing.Point(358, 174);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(254, 158);
+            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen.TabIndex = 7;
+            this.pbImagen.TabStop = false;
+            // 
+            // lblErrorColor
+            // 
+            this.lblErrorColor.AutoSize = true;
+            this.lblErrorColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblErrorColor.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorColor.Location = new System.Drawing.Point(8, 140);
+            this.lblErrorColor.Name = "lblErrorColor";
+            this.lblErrorColor.Size = new System.Drawing.Size(153, 24);
+            this.lblErrorColor.TabIndex = 8;
+            this.lblErrorColor.Text = "Label Error Color";
+            // 
+            // lblErrorImagen
+            // 
+            this.lblErrorImagen.AutoSize = true;
+            this.lblErrorImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblErrorImagen.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorImagen.Location = new System.Drawing.Point(12, 355);
+            this.lblErrorImagen.Name = "lblErrorImagen";
+            this.lblErrorImagen.Size = new System.Drawing.Size(165, 24);
+            this.lblErrorImagen.TabIndex = 9;
+            this.lblErrorImagen.Text = "Label Eror Imagen";
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnColor;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnSalir;
-            this.ClientSize = new System.Drawing.Size(631, 318);
+            this.ClientSize = new System.Drawing.Size(631, 449);
+            this.Controls.Add(this.lblErrorImagen);
+            this.Controls.Add(this.lblErrorColor);
+            this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.btnImagen);
-            this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.btnColor);
@@ -154,9 +181,12 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio 2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,8 +201,10 @@
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.Label lblPath;
-        private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Button btnImagen;
+        private System.Windows.Forms.PictureBox pbImagen;
+        private System.Windows.Forms.Label lblErrorColor;
+        private System.Windows.Forms.Label lblErrorImagen;
     }
 }
 

@@ -18,6 +18,14 @@ namespace Ejercicio2
             InitializeComponent();
         }
 
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblErrorColor.Text = "";
+            lblErrorImagen.Text = "";
+        }
+
+
         // Función que indica las acciones a realizar cuando se pulse el botón o la tecla para cerrarlo
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -56,10 +64,12 @@ namespace Ejercicio2
         {
             try
             {
+                lblErrorColor.Text = "";
                 BackColor = Color.FromArgb(Convert.ToInt32(txtR.Text), Convert.ToInt32(txtG.Text), Convert.ToInt32(txtB.Text));
             }
-            catch (FormatException) { }
-            catch (ArgumentException) { }
+            // Informo de los errores via Label
+            catch (FormatException) { lblErrorColor.Text = "Debes escribir un número en las 3 cajas de texto para el color"; }
+            catch (ArgumentException) { lblErrorColor.Text = "Los números para determinar el color deben de estar entre 0 y 255"; }
         }
 
 
@@ -68,12 +78,12 @@ namespace Ejercicio2
         {
             try
             {
-                Image img = Image.FromFile(txtPath.Text);
-                lblImagen.Size = new Size(img.Width, img.Height);
-                lblImagen.Image = img;
+                lblErrorImagen.Text = "";
+                Image img = Image.FromFile(txtPath.Text); // Creo y defino una variable con la imagen
+                pbImagen.Image = img; // Establezco la imagen en el PictureBox
             }
-            catch (IOException) { }
-            catch (ArgumentException) { }
+            catch (IOException) { lblErrorImagen.Text = "Debes indicar una ruta funcional"; }
+            catch (ArgumentException) { lblErrorImagen.Text = "Debes escribir una ruta"; }
         }
 
 
@@ -89,5 +99,6 @@ namespace Ejercicio2
                 AcceptButton = btnImagen;
             }
         }
+
     }
 }
